@@ -13,22 +13,22 @@ function init() {
 }
 
 function calculate() {
-    document.getElementById("initInputContainer").style.display = "none"
-    document.getElementById("toDrinkContainer").style.display = "unset"
-    const toDrink = setInterval(() => {
-        var ml_toDrink = ((Date.now() - localStorage.getItem("timestamp")) * localStorage.getItem("ml_per_ms")) - localStorage.getItem("ml_drunk")
+    document.getElementById("initContainer").style.display = "none"
+    document.getElementById("container").style.display = "unset"
+    const toDrinkInput = setInterval(() => {
+        var ml_toDrinkInput = ((Date.now() - localStorage.getItem("timestamp")) * localStorage.getItem("ml_per_ms")) - localStorage.getItem("ml_drunk")
 
-        console.log(ml_toDrink)
+        console.log(ml_toDrinkInput)
 
-        if (ml_toDrink < 0 ) ml_toDrink = 0
+        if (ml_toDrinkInput < 0 ) ml_toDrinkInput = 0
 
-        if (ml_toDrink > (parseFloat(localStorage.getItem("liter")) * 1000) - parseFloat(localStorage.getItem("ml_drunk"))) ml_toDrink = (parseFloat(localStorage.getItem("liter")) * 1000) - parseFloat(localStorage.getItem("ml_drunk"))
+        if (ml_toDrinkInput > (parseFloat(localStorage.getItem("liter")) * 1000) - parseFloat(localStorage.getItem("ml_drunk"))) ml_toDrinkInput = (parseFloat(localStorage.getItem("liter")) * 1000) - parseFloat(localStorage.getItem("ml_drunk"))
 
-        document.getElementById("toDrink").innerHTML = ml_toDrink.toFixed(2) + "ml"
+        document.getElementById("toDrinkInput").innerHTML = ml_toDrinkInput.toFixed(2) + "ml"
 
         if (parseFloat(localStorage.getItem("ml_drunk")) / 1000 >= localStorage.getItem("liter")) {
-            document.getElementById("toDrink").innerHTML = "🎉 You have reached your goal! 🎉"
-            clearInterval(toDrink)
+            document.getElementById("toDrinkInput").innerHTML = "🎉 You have reached your goal! 🎉"
+            clearInterval(toDrinkInput)
         }
     }, 1000)
     
