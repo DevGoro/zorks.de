@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pictures/zorks_logo.png"/>
+    <link rel="stylesheet" href="stylesheets/default.css">
+    <title>MusicCat</title>
+    <style>
+        div.changeLanguage {
+            background-color: #212121;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            margin: 20px;
+            padding: 10px;
+            font-size: 20px;
+            border-style: solid;
+            border-color: white;
+            border-radius: 5px;
+        }
+
+        div.changeLanguage a:link {
+            text-decoration: none;
+        }
+
+        section div {
+            padding: 35px 50px;
+        }
+
+        section div h1 {
+            font-size: 40px;
+        }
+
+        section div p {
+            font-size: 20px;
+        }
+
+        section div.logo {
+            text-align: center;
+            margin: 0px 35%;
+        }
+
+        section div.logo img:first-child {
+            width: 200px;
+        }
+
+        section div.logo img {
+            margin-top: 15px;
+        }
+
+        section div.logo h1 {
+            border-bottom-style: solid;
+            border-bottom-color: white;
+            border-bottom-width: 1px;
+        }
+
+        section div.about p {
+            padding-right: 50%;
+            font-size: 30px;
+        }
+
+        section div.installation p img {
+            margin: 20px;
+        }
+        
+        section div.installation ul {
+            margin: 30px;
+        }
+
+        section div.installation ul li {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 1024px){
+            section div.installation p img {
+            width: 800px;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            section div.logo {
+            margin: 0px 0%;
+            }
+
+            section div.about p {
+            padding-right: 0%;
+            }
+            
+            section div.installation p img {
+            width: 600px;
+            }
+        }
+
+        @media screen and (max-width: 425px){
+            section div.logo img:first-child {
+            width: 150px;
+            }
+
+            section div.installation p img {
+            width: 300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/projects">Projects</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="logo">
+            <a href="/index">
+                <p>Zorks</p>
+                <p>Development</p>
+            </a>    
+        </div>
+    </header>
+
+    <a href="/musiccat">
+        <div class="changeLanguage">
+            <p>
+                Change Language
+            </p>
+        </div>
+    </a> 
+
+    <section>
+        <div class="logo">
+            <img src="pictures/musiccat_logo.png">
+            <h1>MusicCat</h1>
+            <img src=https://img.shields.io/badge/Version-V1.0--Alpha-red>
+            <p>10 min.</p>
+        </div>
+
+        <div class="about">
+            <h1>About</h1>
+            <p>
+                MusicCat ist ein Discord Bot welcher Audiodateien abspielen kann. Dies kann mit dem Web-Dashboard als Soundboard benutzt werden. 
+                Der Bot kommt mit 25 Audio Dateien und du kannst einfach welche hinzufügen! Du musst es auf deinem PC oder Server hosten!
+            </p>
+        </div>
+
+        <div class="installation">
+            <h1>Installation</h1>
+            <p>
+                Als erstes musst du einen Discord Bot Account erstellen, dies machst du im 
+                <a href="https://discord.com/developers/applications" target="_blank">Discord-Developer-Portal</a>. Klicke auf "New Application" und wähle einen Namen. <br>
+                Jetzt musst du deine Application noch in einen Bot Account umwandeln, dies machst du im Reiter Bot. <br>
+                Weiter unten im Reiter musst du die "Privileged Gateway Intents" anmachen. <br>
+                <img src="pictures/discord_developer_portal_intents.png"> <br>
+                Um den Bot auf deinen Server einzuladen wechsle zum Reiter OAuth2. <br>
+                Wähle bei "Scopes" bot und bei Permission kannst du dem Bot der Einfachheit halber Admininstrator rechte geben. <br>
+                Wenn du das nicht möchtest, braucht der Bot aufjedenfall diese Rechte:
+            </p>
+
+            <ul>
+                <li>View Channels</li>
+                <li>Send Messages</li>
+                <li>Read Message History</li>
+                <li>Connect</li>
+                <li>Speak</li>
+            </ul>
+
+            <p>
+                Der Link der nun erscheint, kannst du in deinen Browser kopieren und so den Bot einladen. <br>
+                Wichtig: Um den Bot einzuladen, musst du Admininstratorrechte auf dem Server haben. <br>
+
+                <br><br>
+
+                Jetzt musst du noch <a href="https://nodejs.org/en/">Node JS</a> herunterladen. Folge einfach dem Installer. <br>
+                Stelle sicher das npm mit Node JS heruntergeladen wurde. Dies kannst du in einem Terminal mit dem Kommand "npm -v" <br>
+
+                <br><br>
+
+                Nun musst du die <a href="https://github.com/BenediktWutzke/MusicCat" target="_blank">GitHub Repository</a> herunterladen und entzippen <br>
+                
+                <br><br>
+
+                Starte die Batchdatei "library_installer.bat". <br>
+                Falls du nicht Windows als Betriebssystem benutzt, kannst du die endung der Datei für Linux z.B. in .sh ändern. <br>
+
+                <br><br>
+
+                Wenn du nun die Batchdateien "start_server.bat" und "start_bot.bat" doppelklickst, ist das Dashboard auf 
+                <a href="http://localhost:3000" target="_blank">localhost:3000</a> ereichbar. Der Port nach dem Doppelpunkt ist natürlich ein anderer wenn du ihn geändert hast. <br>
+                Wichtig: Starte den Bot nach dem Web-Server! <br>
+
+                <br><br>
+
+                Um sounds hinzuzufügen oder zu entfernen, füge sie einfach in den "sounds" Ordner ein. <br>
+
+                <br><br>
+
+                Falls einer der Services beendet wird oder abstürtzt, würde sich das Terminal von Windows automatisch schließen, um das zu verhindern, kannst du in den Registrierungs-Editor gehen. 
+                Hier navigierst du zu HKEY_CLASSES_ROOT > batfile > shell > command und änderst den Wert zu "cmd.exe /k "%1" %*". Dies ist aber nicht notwendig! <br>
+
+                <br><br>
+
+                Falls dir dieses Projekt gefällt, würde ich mich über einen Stern auf <a href="https://github.com/BenediktWutzke/MusicCat">GitHub</a> freuen.   
+            </p>
+        </div>
+
+        <div class="errors-bugs-feedback">
+            <h1>Errors, Bugs & Feedback</h1>
+            <p>
+                Fehler und Bugs kannst du gerne auf GitHub oder auf meinem <a href="https://discord.gg//Ra4WSRYWk6">Discord Server</a> melden. <br>
+                Wenn du ein neues issue erstellst, stelle sicher, dass es nicht bereits gemeldet wurde. <br>
+                Feedback ist ebenfalls gerne gesehen! 
+            </p>
+        </div>
+
+        <div class="help">
+            <h1>Help</h1>
+            <p>
+                Wenn du ein Problem hast, zögere nicht, meinem <a href="https://discord.gg//Ra4WSRYWk6">Discord Server</a> beizutreten!
+            </p>
+        </div>
+
+        <div class="license">
+            <h1>License</h1>
+            <p>
+                Die <a href="https://choosealicense.com/licenses/mit/">MIT</a> Lizenz kann <a href="https://github.com/BenediktWutzke/MusicCat/blob/main/LICENSE">hier</a> gefunden werden
+            </p>
+        </div>
+
+    </section>
+</body>
+</html>

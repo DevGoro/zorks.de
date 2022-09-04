@@ -1,0 +1,293 @@
+section div {
+    padding: 75px 50px;
+}
+
+section div.welcome {
+    background-image: url(../pictures/tokyo.jpg);
+    background-position: center;
+    padding: 0px;
+    height: calc(100vh - 71px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section div.welcome div.background {
+    padding: 0px;
+}
+
+section div.welcome div.background h1 {
+    font-size: 100px;
+    width: 1403px;
+    border-right: 3px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+section div.welcome div.background div.second {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section div.welcome div.background div.second h2 {
+    font-size: 25px;
+    width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.animation-typewriter {
+    animation: typewriter 3s steps(28) 1s both, blinkTextCursor 750ms steps(28) infinite;
+}
+
+.second-animation-typewriter {
+    animation: secondtypewriter 3s steps(20) 4.5s both
+}
+
+@keyframes typewriter {
+    from {
+            width: 0px;
+    }
+    to {
+            width: 1403px;
+    }
+}
+
+@keyframes secondtypewriter {
+    from {
+            width: 0px;
+    }
+    to {
+            width: 500px;
+    }
+}
+
+@keyframes blinkTextCursor {
+    to {
+            border-right-color: transparent;
+    }
+}
+
+section div.about-me h1 {
+    font-size: 35px;
+}
+
+section div.about-me p {
+    line-height: 35px;
+    font-size: 27px;
+    width: 50%;
+}
+
+section div.about-me img {
+    width: 365px;
+    float: right;
+    margin-right: 15%;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+}
+
+section div.knowledge {
+    text-align: center;
+}
+
+section div.knowledge h1 {
+    font-size: 35px;
+}
+
+section div.knowledge p {
+    padding-top: 10px;
+    margin-left: 260px;
+    transform: rotate(20deg);
+}
+
+section div.knowledge figure {
+    width: max-content;
+    text-align: center;
+    margin: -10px 5px;
+    display: inline-block;
+}
+
+section div.knowledge figure img {
+    width: 50px;
+    margin: 2.5px;
+}
+
+section div.knowledge figure hr {
+    background-color: white;
+    border: none;
+    height: 2px;
+    margin: 2.5px;
+}
+
+section div.knowledge figure figcaption {
+    font-size: 20px;
+    margin: 2.5px 10px;
+}
+
+section div.contact {
+    text-align: center;
+}
+
+section div.contact h1 {
+    font-size: 35px;
+}
+
+section div.contact figure {
+    width: max-content;
+    text-align: center;
+    margin: 10px 5px;
+    display: inline-block;
+}
+
+section div.contact figure img {
+    width: 50px;
+    margin: 2.5px;
+}
+
+section div.contact figure hr {
+    background-color: white;
+    border: none;
+    height: 2px;
+    margin: 2.5px;
+}
+
+section div.contact figure figcaption {
+    font-size: 20px;
+    margin: 2.5px 10px;
+}
+
+section div.contact p {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+    section div.welcome div.background h1 {
+        font-size: 50px;
+    }
+
+    @keyframes typewriter {
+        from {
+                width: 0px;
+        }
+        to {
+                width: 703px;
+        }
+    }
+
+    section div.about-me img {
+        margin-right: 0%;
+        margin-left: 10px;
+    }
+
+    section div.about-me p {
+    width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section div.welcome div.background h1 {
+        font-size: 45px;
+    }
+
+    section div.welcome div.background div.second h2 {
+        font-size: 20px;
+    }
+
+    @keyframes typewriter {
+        from {
+                width: 0px;
+        }
+        to {
+                width: 633px;
+        }
+    }
+
+    @keyframes secondtypewriter {
+        from {
+                width: 0px;
+        }
+        to {
+                width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    section div.about-me img {
+    width: 150px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 100px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    section div.welcome div.background h1 {
+        font-size: 25px;
+    }
+
+    section div.welcome div.background div.second h2 {
+        font-size: 10px;
+    }
+
+    @keyframes typewriter {
+        from {
+                width: 0px;
+        }
+        to {
+                width: 353px;
+        }
+    }
+
+    @keyframes secondtypewriter {
+        from {
+                width: 0px;
+        }
+        to {
+                width: 200px;
+        }
+    }
+
+    section div.about-me {
+        text-align: center;
+    }
+
+    section div.about-me img {
+        float: none;
+        margin-left: 0;
+    }
+
+    section div.about-me p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    section div.knowledge p {
+        margin-left: 150px;
+    }
+
+    section div.knowledge figure {
+        margin: -10px 5px 10px 5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    section div.welcome div.background h1 {
+        font-size: 20px;
+    }
+
+    @keyframes typewriter {
+        from {
+                width: 0px;
+        }
+        to {
+                width: 283px;
+        }
+    }
+}
