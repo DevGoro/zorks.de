@@ -8,7 +8,7 @@ function init() {
     localStorage.setItem("day", date.getDate())
     localStorage.setItem("liter", liter)
     localStorage.setItem("endTimestamp", new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.substring(0, 2), time.substring(2, 4), 0, 0).getTime())
-    localStorage.setItem("ml_per_ms", liter * 1000 / ((parseInt(localStorage.getItem("endTimestamp") - parseInt(localStorage.getItem("timestamp"))))))
+    localStorage.setItem("ml_per_ms", liter * 1000 / ((parseFloat(localStorage.getItem("endTimestamp") - parseFloat(localStorage.getItem("timestamp"))))))
     calculate()
 }
 
@@ -22,11 +22,11 @@ function calculate() {
 
         if (ml_toDrink < 0 ) ml_toDrink = 0
 
-        if (ml_toDrink > (parseInt(localStorage.getItem("liter")) * 1000) - parseInt(localStorage.getItem("ml_drunk"))) ml_toDrink = (parseInt(localStorage.getItem("liter")) * 1000) - parseInt(localStorage.getItem("ml_drunk"))
+        if (ml_toDrink > (parseFloat(localStorage.getItem("liter")) * 1000) - parseFloat(localStorage.getItem("ml_drunk"))) ml_toDrink = (parseFloat(localStorage.getItem("liter")) * 1000) - parseFloat(localStorage.getItem("ml_drunk"))
 
         document.getElementById("toDrink").innerHTML = ml_toDrink.toFixed(2) + "ml"
 
-        if (parseInt(localStorage.getItem("ml_drunk")) / 1000 >= localStorage.getItem("liter")) {
+        if (parseFloat(localStorage.getItem("ml_drunk")) / 1000 >= localStorage.getItem("liter")) {
             document.getElementById("toDrink").innerHTML = "🎉 You have reached your goal! 🎉"
             clearInterval(toDrink)
         }
@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     document.getElementById("saveDrunk").addEventListener("click", () => {
         var drunk = 0
         if (localStorage.getItem("ml_drunk")) {
-            drunk = parseInt(localStorage.getItem("ml_drunk"))
+            drunk = parseFloat(localStorage.getItem("ml_drunk"))
         }
-        localStorage.setItem("ml_drunk", drunk + parseInt(document.getElementById("drunk").value))
+        localStorage.setItem("ml_drunk", drunk + parseFloat(document.getElementById("drunk").value))
     })
 
     if (localStorage.getItem("timestamp")) {
